@@ -25,8 +25,10 @@ img {
    position: absolute;
    top: 0;
    right: 0;
-   bottom: 0;
-   left: 0;
+   width: 100%;
+   height: 100%;
+   /* bottom: 0;
+   left: 0; */
    background-color: rgba(0,0,0,.5);
    pointer-events : none;
 }
@@ -116,6 +118,10 @@ header p {
    width: 900px;
    margin: 0 auto;
 }
+/* .eventImgWrapper {
+   position: relative;
+   padding-top: 20%;
+} */
 .eventImg {
    flex-basis: 50%;
    margin: 0 20px;
@@ -195,7 +201,7 @@ footer p {
 
 @media (max-width: 767px) {
    .headerWrapper {
-      height: 70vh;
+      height: 100vh;
    }
    header nav {
       display: none;
@@ -203,29 +209,59 @@ footer p {
    header h1 {
       font-size: 50px;
    }
+   header .box p {
+      font-size: 14px;
+      padding: 2em;
+   }
+   .foodGallery ul {
+      margin: 30px 0 10px;
+   }
+   .foodGallery ul li a {
+      font-size: 14px;
+      color: #000000;
+   }
    .foodImg {
-      width: 33.333%;
-      height: 30%;
+      width: 50%;
+      height: 20%;
    }
    .whatPeopleSay {
-      margin: 120px auto 0;
+      margin: 90px auto 0;
       width: 100%;
    }
    .peopleImg img {
-      width: 50%;
+      width: 70%;
+      margin-right: 20px;
+   }
+   .peopleComment h4 {
+      margin: 10px 0 22px;
+      font-size: 15px;
+   }
+   .peopleComment p {
+      font-size: 13px;
    }
    .events {
       padding: 30px 0 15px;
+      margin-top: 80px;
    }
    .events h2 {
       margin: 0;
+   }
+   .events .eventDate p {
+      font-size: 14px;
+   }
+   .events h3 {
+      font-size: 15px;
+   }
+   .events .eventDescription p {
+      font-size: 13px;
    }
    .eventWrapper {
       display: block;
       width: 100%;
    }
    .eventImg {
-      height: 45%;
+      /* padding-top: 120%; */
+      height: 50%;
       margin: 30px auto;
       width: 80%;
       position: relative;
@@ -248,7 +284,18 @@ footer p {
    }
    .workinghoursAndContact {
       display: block;
-      width: 60%;
-      margin: 40px auto 0;
+      width: 100%;
+   }
+   .workinghoursAndContact h2 {
+      text-align: center;
+      margin-bottom: 12px;
+   }
+   .workinghoursWrapper table {
+      margin: 0 auto;
+      width: 70%;
+   }
+   .contactInfo {
+      margin: 0 auto;
+      width: 70%;
    }
 }
