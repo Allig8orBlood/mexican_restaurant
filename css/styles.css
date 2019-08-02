@@ -17,19 +17,23 @@ img {
    /* background-attachment: fixed; */
    /* background-image: url("../imgs/tacos2.jpg"); */
    /* background-size: cover; */
-   position: relative;
-   height: 100vh;
+   /* position: relative;
+   height: 100vh; */
+   background: none;
 }
 .headerWrapper::before {
-   background-image: url("../imgs/tacos2.jpg");
+   background: url("../imgs/tacos2.jpg") center/cover no-repeat fixed;
+   -webkit-transform: translate3d(0, 0, -1px);
+   transform: translate3d(0, 0, -1px);
    background-attachment: fixed;
-   background-size: cover;
+   display: block;
+   -webkit-background-size: cover;
    content: '';
-   position: absolute;
+   /* position: absolute; */
    top: 0;
-   right: 0;
+   left: 0;
    width: 100%;
-   height: 100%;
+   height: 100vh;
    /* bottom: 0;
    left: 0; */
    /* background-color: rgba(0,0,0,.5);
