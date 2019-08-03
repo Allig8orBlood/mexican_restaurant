@@ -13,18 +13,10 @@ a {
 img {
    vertical-align: bottom;
 }
-header::before {
-   content: '';
-   display: block;
-   position: fixed;
-   top: 0;
-   left: 0;
-   z-index: -1;
+header {
    width: 100%;
    height: 100vh;
-   background: url("../imgs/tacos2.jpg");
-   background-size: cover;
-   background-attachment: fixed;
+   background: url("../imgs/tacos2.jpg") center/cover no-repeat fixed;
 }
 .BGopacity {
    background-color: rgba(0,0,0,.5);
@@ -200,8 +192,19 @@ footer p {
 }
 
 @media (max-width: 767px) {
-   .headerWrapper {
+   header {
+      background: none;
+   }
+   header::before {
+      content: '';
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
       height: 100vh;
+      background: url("../imgs/tacos2.jpg") center/cover no-repeat;
    }
    header nav {
       display: none;
