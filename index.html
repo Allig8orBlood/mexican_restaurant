@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ja">
    <head>
       <meta charset="utf-8">
@@ -16,11 +17,10 @@
             <div class="box">
                <nav>
                   <ul>
-                     <li><a href="">Food menu</a></li>
-                     <li><a href="">Food gallerry</a></li>
-                     <li><a href="">What people say</a></li>
-                     <li><a href="">Events</a></li>
-                     <li><a href="">Working hours & Contact</a></li>
+                     <li><a href="#foodGallery">Food gallerry</a></li>
+                     <li><a href="#whatPeopleSay">What people say</a></li>
+                     <li><a href="#events">Events</a></li>
+                     <li><a href="#workinghoursAndContact">Working hours & Contact</a></li>
                   </ul>
                </nav>
                <h1>Taco Taco House</h1>
@@ -28,71 +28,73 @@
             </div>
       </header>
       <main>
-         <section class="foodGallery">
+         <section class="foodGallery" id="foodGallery">
             <ul class="foodGalleryTab">
-               <li class="all">ALL</li>
+               <li class="all active">ALL</li>
                <li class="lunch">LUNCH</li>
                <li class="dinner">DINNER</li>
                <li class="drink">DRINK</li>
             </ul>
             <div class="foodGalleryImgs">
-               <img src="imgs/beafsteak.jpg" class="foodImg all dinner"><img src="imgs/buffalowing.jpg" class="foodImg all dinner"><img src="imgs/chillibeanstacos.jpg" class="foodImg all lunch dinner"><img src="imgs/friedpotato.jpg" class="foodImg all dinner"><img src="imgs/hamburger.jpg" class="foodImg all lunch dinner"><img src="imgs/meattacos.jpg" class="foodImg all lunch dinner"><img src="imgs/nachos.jpg" class="foodImg all dinner"><img src="imgs/porksteak.jpg" class="foodImg all dinner"><img src="imgs/shrimptacorice.jpg" class="foodImg all lunch dinner"><img src="imgs/shrimptacos.jpg" class="foodImg all lunch dinner"><img src="imgs/drinks.jpg" class="foodImg all drink"><img src="imgs/drink1.jpg" class="foodImg all drink">
+               <a href="imgs/beafsteak.jpg"><img src="imgs/beafsteak.jpg" class="foodImg all dinner" alt="beafsteak"></a><a href="imgs/buffalowing.jpg"><img src="imgs/buffalowing.jpg" class="foodImg all dinner" alt="buffalowing"></a><a href="imgs/chillibeanstacos.jpg"><img src="imgs/chillibeanstacos.jpg" class="foodImg all lunch dinner" alt="chillibeanstacos"></a><a href="imgs/friedpotato.jpg"><img src="imgs/friedpotato.jpg" class="foodImg all dinner" alt="friedpotato"></a><a href="imgs/hamburger.jpg"><img src="imgs/hamburger.jpg" class="foodImg all lunch dinner" alt="hamburger"></a><a href="imgs/tacos.jpg"><img src="imgs/tacos.jpg" class="foodImg all lunch dinner" alt="tacos"></a><a href="imgs/nachos.jpg"><img src="imgs/nachos.jpg" class="foodImg all dinner" alt="nachos"></a><a href="imgs/porksteak.jpg"><img src="imgs/porksteak.jpg" class="foodImg all dinner" alt="porksteak"></a><a href="imgs/shrimptacorice.jpg"><img src="imgs/shrimptacorice.jpg" class="foodImg all lunch dinner" alt="shrimptacorice"></a><a href="imgs/shrimptacos.jpg"><img src="imgs/shrimptacos.jpg" class="foodImg all lunch dinner" alt="shrimptacos"></a><a href="imgs/drinks.jpg"><img src="imgs/drinks.jpg" class="foodImg all drink" alt="drinks"></a><a href="imgs/drink1.jpg"><img src="imgs/drink1.jpg" class="foodImg all drink" alt="drink1"></a>
             </div>
          </section>
-         <div class="sectionBox1">
-            <section class="whatPeopleSay">
+         <section class="whatPeopleSay" id="whatPeopleSay">
+            <h2>WHAT PEOPLE SAY</h2>
+            <div class="whatPeopleSayWrapper">
                <div class="peopleImg">
                   <img src="imgs/people1.jpg">
                </div>
                <div class="peopleComment">
-                  <div class="stars"></div>
+                  <span class="stars"></span>
+                  <span class="stars"></span>
+                  <span class="stars"></span>
+                  <span class="stars"></span>
+                  <span class="stars"></span>
                   <h4>急性タコス中毒さん</h4>
                   <p>とても美味しかったです。</p>
                </div>
-            </section>
-         </div>
+            </div>
+         </section>
          <!-- <div class="eventsWrapper"> -->
-            <section class="events">
-               <div class="BGopacity2">
-               </div>
-               <div class="box">
-                  <div class="eventWrapper">
-                     <h2>EVENTS</h2>
-                     <!-- <div class="eventImgWrapper"> -->
-                     <div class="eventImg">
-                        <div class="eventText">
-                           <div class="eventDate"><p>2020/06/30</p></div>
-                           <div class="eventDescription">
-                              <h3>牛の丸焼き</h3>
-                              <p>開業当初から毎年欠かさず行われているイベント。
-                                 音楽の牛の脂に溺れて楽しめ！
-                              </p>
-                           </div>
-                        </div>
-                        <!-- </div> -->
-                     </div>
-                     <!-- <div class="eventImgWrapper"> -->
-                     <div class="eventImg">
-                        <div class="eventText">
-                           <div class="eventDate"><p>2020/06/30</p></div>
-                           <div class="eventDescription">
-                              <h3>牛の丸焼き</h3>
-                              <p>開業当初から毎年欠かさず行われているイベント。
-                                 音楽と牛の脂に溺れて楽しめ！
-                              </p>
-                           </div>
+         <section class="events" id="events">
+            <div class="BGopacity2">
+            </div>
+            <div class="box">
+               <div class="eventWrapper">
+                  <h2>EVENTS</h2>
+                  <!-- <div class="eventImgWrapper"> -->
+                  <div class="eventImg">
+                     <div class="eventText">
+                        <div class="eventDate"><p>2020/06/30</p></div>
+                        <div class="eventDescription">
+                           <h3>牛の丸焼き</h3>
+                           <p>開業当初から毎年欠かさず行われているイベント。
+                              音楽の牛の脂に溺れて楽しめ！
+                           </p>
                         </div>
                      </div>
                      <!-- </div> -->
                   </div>
+                  <!-- <div class="eventImgWrapper"> -->
+                  <div class="eventImg">
+                     <div class="eventText">
+                        <div class="eventDate"><p>2020/06/30</p></div>
+                        <div class="eventDescription">
+                           <h3>牛の丸焼き</h3>
+                           <p>開業当初から毎年欠かさず行われているイベント。
+                              音楽と牛の脂に溺れて楽しめ！
+                           </p>
+                        </div>
+                     </div>
+                  </div>
                </div>
-            </section>
-         <!-- </div> -->
+            </div>
+         </section>
          <div class="sectionBox2">
-            <section class="workinghoursAndContact">
+            <section class="workinghoursAndContact" id="workinghoursAndContact">
                <div class="workinghoursWrapper">
                   <h2>Working hours</h2>
-                  <!-- <div class="workinghoursIcon"><img src=""></div> -->
                   <table>
                      <tr class="workinghoursTr"><td class="dayLabel">Monday</td><td class="daySep"></td><td class="dayValue">Closed</td></tr>
                      <tr class="workinghoursTr"><td class="dayLabel">Tuesday</td><td class="daySep"></td><td class="dayValue">18:00~24:00</td></tr>
@@ -127,5 +129,6 @@
             </div>
          </footer>
       </div>
+      <div id="pageTop"><a href="#"></a></div>
    </body>
 </html>

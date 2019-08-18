@@ -65,38 +65,65 @@ header p {
    margin: 0;
    color: #ffffff;
 }
-.foodGallery ul {
+.foodGalleryTab {
    text-align: center;
    background: #deb887;
    margin: 0;
-   padding: 17px 0;
+   padding: 30px 0 17px;
 }
 .foodGallery ul li {
    padding: 10px;
    cursor: pointer;
+   font-size: 15px;
 }
 .foodGalleryImgs {
    background: #deb887;
+   position: relative;
 }
 .foodImg {
    width: 20%;
-   height: 25%;
+   height: 180px;
    object-fit: cover;
 }
 .foodGalleryTab li.active {
    color: #ff4500;
+   border: 1px solid #ff4500;
 }
 .foodImg .active {
    display: block;
 }
-.sectionbox1{
-   padding: 80px 0;
-   background-color: #deb887;
+#modalBg {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background: rgba(0,0,0, .4);
+}
+#modalPhoto {
+   position: fixed;
+   width: 840px;
+   height: 560px;
+}
+#modalPhoto img {
+   width: 840px;
+   height: 560px;
+   object-fit: contain;
+   background: #000000;
 }
 .whatPeopleSay {
-   display: flex;
    margin: 0 auto;
-   width: 1140px;
+   padding: 30px 0 80px;
+   width: 100%;
+   background: #deb887;
+   box-sizing: border-box;
+}
+.whatPeopleSay h2 {
+   text-align: center;
+   font-size: 40px;
+}
+.whatPeopleSayWrapper {
+   display: flex;
 }
 .peopleImg {
    flex:1;
@@ -110,6 +137,15 @@ header p {
 }
 .peopleComment {
    flex:1;
+}
+.peopleComment p {
+   font-size: 15px;
+}
+.stars::before {
+   font-family: "Font Awesome 5 Free";
+   content: '\f005';
+   font-weight: 900;
+   color: #ffd700;
 }
 .events {
    background: url("../imgs/event.jpg") center/cover no-repeat fixed;
@@ -146,11 +182,6 @@ header p {
    left: 0;
    font-size: 40px;
 }
-
-/* .eventImgWrapper {
-   position: relative;
-   padding-top: 20%;
-} */
 .eventImg {
    flex-basis: 50%;
    margin: 0 20px;
@@ -231,7 +262,48 @@ footer p {
    font-size: 12px;
    opacity: .6;
 }
-
+#pageTop{
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  opacity: 0.8;
+}
+#pageTop a{
+  position: relative;
+  display: block;
+  width: 90px;
+  height: 90px;
+}
+#pageTop a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f102';
+  font-size: 25px;
+  color: #ff4500;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -40px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+#pageTop a::after{
+  content: 'PAGE TOP';
+  font-size: 13px;
+  position: absolute;
+  top: 45px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+  color: #ff4500;
+}
 @media (max-width: 767px) {
    header {
       background: none;
