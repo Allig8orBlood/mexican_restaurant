@@ -339,16 +339,13 @@ footer p {
    .foodImg {
       width: 20%;
    }
-   .foodImg::before {
-      content: '';
-      display: block;
-      padding-top: 100%;
-   }
    #modalPhoto {
       width: 100%;
+      height: auto;
    }
    #modalPhoto img {
       width: 100%;
+      height: auto;
    }
    .whatPeopleSay {
       margin: 0 auto;
