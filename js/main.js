@@ -12,18 +12,15 @@ $(function() {
          }
       });
    });
-   // 拡大画像表示
+   // モーダルウィンドウ
    $('.foodGalleryImgs > a').on('click', function() {
 
       $('body').append('<div id="modalBg">');
       $('body').append('<div id="modalPhoto">');
-      //クリックした画像のalt属性を取得
-      // $('.foodGalleryImgs > a > img').on('click', function() {
-      //    $('#modalPhoto > img').attr('alt', $(this).attr('alt'));
-      // });
+
       $('#modalBg').hide();
       $('#modalPhoto').hide();
-      // $('main, .sectionBox2').hide();
+
       $('#modalPhoto').html('<img>');
 
       $('#modalPhoto > img').attr('src', $(this).attr('href'));
@@ -35,11 +32,9 @@ $(function() {
       $('#modalBg').on('click', function() {
          $(this).fadeOut(function() {
             $(this).remove();
-            // $('main, .sectionBox2').fadeIn();
          });
          $('#modalPhoto').fadeOut(function() {
             $(this).remove();
-            // $('main, .sectionBox2').fadeIn();
          });
       });
       modalCenter();
@@ -48,7 +43,7 @@ $(function() {
       return false;
 
    });
-
+   //モーダルウィンドウ中央寄せ
    function modalCenter() {
       var winWidth = $(window).width();
       var winHeight = $(window).height();
@@ -62,7 +57,7 @@ $(function() {
          'top': modalTop + 'px'
       });
    }
-
+   //スムーススクロール
    $('nav > ul > li > a').on('click', function() {
       var target = $($(this).attr('href')).offset().top;
       $('html, body').animate({
@@ -71,7 +66,7 @@ $(function() {
 
       return false;
    });
-
+   //ページトップへスムーススクロール
    var pageTop = $('#pageTop');
    pageTop.hide();
    $(window).scroll(function() {
@@ -82,9 +77,46 @@ $(function() {
       }
    });
    pageTop.on('click', function() {
-      $('html, body').animate( {
+      $('html, body').animate({
          scrollTop: 0
       }, 500);
+   });
+
+   //what people say スライド
+   var dir = -1;
+   var duration = 300;
+
+   $('#slide ul').prepend($('#slide li:last-child'));
+   $('#slide ul').css('left', -1000);
+
+   function slide() {
+      if(dir == -1) {
+         $('#slide ul').animate({
+            'left': '-=1000px'
+         }, duration, function() {
+            $(this).append($('#slide li:first-child'));
+            $(this).css('left', -1000);
+         });
+      } else {
+         $('#slide ul').animate({
+            'left': '+=1000px'
+         }, duration, function() {
+            $(this).prepend($('#slide li:last-child'));
+            $(this).css('left', -1000);
+
+            dir = -1;
+         });
+      }
+   }
+
+   $('#prevBtn').on('click', function() {
+      dir = 1;
+      slide();
+   });
+
+   $('#nextBtn').on('click', function() {
+      dir = -1;
+      slide();
    });
 
 });

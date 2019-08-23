@@ -2,7 +2,7 @@ body {
    margin: 0;
 }
 ul {
-   list-style-type: none!important;
+   list-style-type: none;
 }
 li {
    display: inline-block;
@@ -12,6 +12,15 @@ a {
 }
 img {
    vertical-align: bottom;
+}
+button {
+	background: none;
+	border: none;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+   cursor: pointer;
 }
 header {
    width: 100%;
@@ -110,6 +119,45 @@ header p {
    height: 560px;
    object-fit: contain;
    background: #000000;
+}
+#slide {
+   position: relative;
+   overflow: hidden;
+   height: 500px;
+   width: 1000px;
+   margin: 0 auto;
+}
+#slide ul {
+   position: absolute;
+   width: 3000px;
+   padding: 0;
+   margin: 0;
+}
+#slide li {
+   float: left;
+   width: 1000px;
+}
+#slide img {
+   object-fit: cover;
+   width: 1000px;
+   height: 500px;
+}
+#prevBtn {
+   position: absolute;
+   top: 0;
+   left: 20px;
+   bottom: 0;
+   margin: auto;
+}
+#nextBtn {
+   position: absolute;
+   top: 0;
+   right: 20px;
+   bottom: 0;
+   margin: auto;
+}
+.btnColor {
+   opacity: .6;
 }
 .whatPeopleSay {
    margin: 0 auto;
