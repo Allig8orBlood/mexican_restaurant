@@ -55,6 +55,7 @@ header nav ul li a {
    color: #ffffff;
    text-transform: uppercase;
    font-size: 14px;
+   letter-spacing: .1rem;
 }
 header nav li + li::before {
    content: '\f7e5';
@@ -73,6 +74,7 @@ header p {
    text-align: center;
    margin: 0;
    color: #ffffff;
+   letter-spacing: .2rem;
 }
 .foodGalleryTab {
    text-align: center;
@@ -123,24 +125,19 @@ header p {
 #slide {
    position: relative;
    overflow: hidden;
-   height: 500px;
-   width: 1000px;
+   height: 250px;
+   width: 70%;
    margin: 0 auto;
 }
 #slide ul {
    position: absolute;
-   width: 3000px;
+   /* width: 3000px; */
    padding: 0;
    margin: 0;
 }
 #slide li {
    float: left;
-   width: 1000px;
-}
-#slide img {
-   object-fit: cover;
-   width: 1000px;
-   height: 500px;
+   width: 100%;
 }
 #prevBtn {
    position: absolute;
@@ -148,6 +145,7 @@ header p {
    left: 20px;
    bottom: 0;
    margin: auto;
+   padding: 0 160px 0 20px;
 }
 #nextBtn {
    position: absolute;
@@ -155,9 +153,13 @@ header p {
    right: 20px;
    bottom: 0;
    margin: auto;
+   padding: 0 20px 0 160px;
 }
 .btnColor {
    opacity: .6;
+}
+.whatPeopleSayWrapper {
+   display: flex;
 }
 .whatPeopleSay {
    margin: 0 auto;
@@ -170,9 +172,6 @@ header p {
    text-align: center;
    font-size: 40px;
 }
-.whatPeopleSayWrapper {
-   display: flex;
-}
 .peopleImg {
    flex:1;
    text-align: right;
@@ -182,12 +181,18 @@ header p {
    height: auto;
    object-fit: cover;
    margin-right: 30px;
+   border-radius: 50%;
+   box-shadow: 0 0 5px gray;
 }
 .peopleComment {
    flex:1;
 }
 .peopleComment p {
    font-size: 15px;
+   width: 70%;
+}
+.peopleComment h4 {
+   margin: 10px 0 20px;
 }
 .stars::before {
    font-family: "Font Awesome 5 Free";
@@ -374,8 +379,8 @@ footer p {
       font-size: 50px;
    }
    header .box p {
-      font-size: 14px;
-      padding: 2em;
+      font-size: 12px;
+      padding: 2rem;
    }
    .foodGallery ul {
       margin: 0;
@@ -395,23 +400,68 @@ footer p {
       width: 100%;
       height: auto;
    }
-   .whatPeopleSay {
-      margin: 0 auto;
+   #slide {
+      position: relative;
+      overflow: hidden;
+      height: 350px;
       width: 100%;
+      margin: 0 auto;
+   }
+   .whatPeopleSay {
+      /* margin: 0 auto; */
+      width: 100%;
+   }
+   #slide ul {
+      height: 350px;
+      position: absolute;
+      padding: 0;
+      margin: 0;
+   }
+   #slide li {
+      float: left;
+      /* width: 33.33%; */
+   }
+   .whatPeopleSayWrapper {
+      display: block;
+      /* width: 100%; */
    }
    .whatPeopleSay h2 {
       font-size: 30px;
    }
+   .peopleImg {
+      text-align: center;
+   }
    .peopleImg img {
+      width: 40%;
+      margin: 0 auto;
+   }
+   .peopleComment {
       width: 70%;
-      margin-right: 20px;
+      margin: 6px auto 0;
+      text-align: center;
    }
    .peopleComment h4 {
-      margin: 10px 0 22px;
+      margin: 3px 0 0 0;
       font-size: 15px;
    }
    .peopleComment p {
       font-size: 13px;
+      width: 100%;
+   }
+   #prevBtn {
+      top: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+      padding: 0;
+   }
+   #nextBtn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      padding: 0;
    }
    .events {
       padding: 30px 0 15px;
@@ -436,7 +486,6 @@ footer p {
       width: 100%;
    }
    .eventImg {
-      /* padding-top: 120%; */
       height: 40vh;
       margin: 30px auto;
       width: 80%;

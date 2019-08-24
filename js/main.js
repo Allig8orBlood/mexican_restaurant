@@ -85,26 +85,33 @@ $(function() {
    //what people say スライド
    var dir = -1;
    var duration = 300;
+   //スライドliのwidth取得
+   var slideWidth = $('#slide > ul > li').width();
+   var slideNum = $('#slide > ul > li').length;
+   var slideUlWidth = slideWidth * slideNum;
+   var sliderWidth = $('#slide').width();
+   $('#slide > ul > li').css('width', sliderWidth);
+   $('#slide > ul').css('width', slideUlWidth);
+   console.log(sliderWidth);
+   // $('#slide > ul > li').css('width', slideWidth);
 
-   $('#slide ul').prepend($('#slide li:last-child'));
-   $('#slide ul').css('left', -1000);
+   $('#slide > ul').prepend($('#slide li:last-child'));
+   $('#slide > ul').css('left', -slideWidth);
 
    function slide() {
       if(dir == -1) {
-         $('#slide ul').animate({
-            'left': '-=1000px'
+         $('#slide > ul').stop().animate({
+            'left': '-=slideWidth' + 'px'
          }, duration, function() {
             $(this).append($('#slide li:first-child'));
-            $(this).css('left', -1000);
+            $(this).css('left', -slideWidth);
          });
       } else {
-         $('#slide ul').animate({
-            'left': '+=1000px'
+         $('#slide > ul').stop().animate({
+            'left': '+=slideWidth' + 'px'
          }, duration, function() {
             $(this).prepend($('#slide li:last-child'));
-            $(this).css('left', -1000);
-
-            dir = -1;
+            $(this).css('left', -slideWidth);
          });
       }
    }
