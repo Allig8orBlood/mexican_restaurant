@@ -6,6 +6,15 @@ $(function() {
             left: '+=' + dis
          }, 200);
          dis *= -1;
+
+         $(this).toggleClass('open');
+         if($(this).hasClass('open')) {
+            $('i', this).addClass('fa-times');
+            $('i', this).removeClass('fa-bars');
+         } else {
+            $('i', this).addClass('fa-bars');
+            $('i', this).removeClass('fa-times');
+         }
    });
 
    $('.foodGalleryTab > li').on('click', function() {

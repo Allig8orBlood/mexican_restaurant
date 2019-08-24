@@ -48,9 +48,12 @@ header {
 .toggleBtn {
    position: absolute;
    z-index: 100;
-   top: 20px;
-   left: 20px;
+   top: 15px;
+   left: 15px;
    display: none;
+}
+.toggleIcon {
+   color: #ffffff;
 }
 .drawerMenu {
    z-index: 99;
