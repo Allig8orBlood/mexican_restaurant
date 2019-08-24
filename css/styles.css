@@ -45,6 +45,48 @@ header {
    top: 0;
    left: 0;
 }
+.toggleBtn {
+   position: absolute;
+   z-index: 100;
+   top: 20px;
+   left: 20px;
+   display: none;
+}
+.drawerMenu {
+   z-index: 99;
+   width: 200px;
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   left: -200px;
+   background: #deb887
+}
+.drawerMenu .active {
+   box-shadow: 1px 1px 20px;
+}
+.drawerMenu ul {
+   margin: 60px 0 0 0;
+   padding: 0 0 0 15px;
+}
+.drawerMenu ul li {
+   display: block;
+   border-bottom: 1px solid #cd853f;
+   width: 90%;
+}
+.drawerMenu ul li:last-child {
+   border-bottom: none;
+}
+.drawerMenu ul li a {
+   font-size: 14px;
+   display: block;
+   padding: .5rem 0;
+   color: #000000;
+   font-weight: bold;
+   cursor: pointer;
+}
+.drawerMenu ul li a:last-child {
+   border: none;
+}
 header nav ul {
    text-align: center;
    padding: 20px 0 0 0;
@@ -220,7 +262,7 @@ header p {
    display: flex;
    align-items: center;
    justify-content: center;
-   width: 900px;
+   width: 70%;
    height: 100%;
    margin: 0 auto;
    position: relative;
@@ -236,6 +278,7 @@ header p {
    font-size: 40px;
 }
 .eventImg {
+   width: 40%;
    flex-basis: 50%;
    margin: 0 20px;
    background-size: cover;
@@ -375,6 +418,10 @@ footer p {
    header nav {
       display: none;
    }
+   .toggleBtn {
+      display: block;
+      position: fixed;
+   }
    header h1 {
       font-size: 50px;
    }
@@ -408,7 +455,7 @@ footer p {
       margin: 0 auto;
    }
    .whatPeopleSay {
-      /* margin: 0 auto; */
+      padding: 30px 0;
       width: 100%;
    }
    #slide ul {
@@ -522,5 +569,47 @@ footer p {
    .contactInfo {
       margin: 0 auto;
       width: 70%;
+   }
+   #pageTop{
+     width: 60px;
+     height: 60px;
+     position: fixed;
+     right: 5px;
+     bottom: 2px;
+     opacity: 0.8;
+   }
+   #pageTop a{
+     position: relative;
+     display: block;
+     width: 60px;
+     height: 60px;
+   }
+   #pageTop a::before{
+     font-family: 'Font Awesome 5 Free';
+     font-weight: 900;
+     content: '\f102';
+     font-size: 25px;
+     color: #ff4500;
+     position: absolute;
+     width: 25px;
+     height: 25px;
+     top: -20px;
+     bottom: 0;
+     right: 0;
+     left: 0;
+     margin: auto;
+     text-align: center;
+   }
+   #pageTop a::after{
+     content: 'PAGE TOP';
+     font-size: 10px;
+     position: absolute;
+     top: 35px;
+     bottom: 0;
+     right: 0;
+     left: 0;
+     margin: auto;
+     text-align: center;
+     color: #ff4500;
    }
 }

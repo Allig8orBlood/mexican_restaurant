@@ -1,4 +1,13 @@
 $(function() {
+
+   var dis = 200;
+   $('.toggleBtn').on('click', function() {
+         $('.drawerMenu').animate({
+            left: '+=' + dis
+         }, 200);
+         dis *= -1;
+   });
+
    $('.foodGalleryTab > li').on('click', function() {
       $('.foodGalleryTab > li,.foodGalleryImgs > foodImg').removeClass('active');
       var tabClass = $(this).attr('class');
@@ -58,7 +67,7 @@ $(function() {
       });
    }
    //スムーススクロール
-   $('nav > ul > li > a').on('click', function() {
+   $('.smoothNav > ul > li > a').on('click', function() {
       var target = $($(this).attr('href')).offset().top;
       $('html, body').animate({
          scrollTop: target
@@ -84,7 +93,7 @@ $(function() {
 
    //what people say スライド
    var dir = -1;
-   var duration = 300;
+   var duration = 500;
    //スライドliのwidth取得
    var slideWidth = $('#slide > ul > li').width();
    var slideNum = $('#slide > ul > li').length;
@@ -92,8 +101,7 @@ $(function() {
    var sliderWidth = $('#slide').width();
    $('#slide > ul > li').css('width', sliderWidth);
    $('#slide > ul').css('width', slideUlWidth);
-   console.log(sliderWidth);
-   // $('#slide > ul > li').css('width', slideWidth);
+   // console.log(sliderWidth);
 
    $('#slide > ul').prepend($('#slide li:last-child'));
    $('#slide > ul').css('left', -slideWidth);
@@ -101,14 +109,14 @@ $(function() {
    function slide() {
       if(dir == -1) {
          $('#slide > ul').stop().animate({
-            'left': '-=slideWidth' + 'px'
+            left: '-=' + slideWidth
          }, duration, function() {
             $(this).append($('#slide li:first-child'));
             $(this).css('left', -slideWidth);
          });
       } else {
          $('#slide > ul').stop().animate({
-            'left': '+=slideWidth' + 'px'
+            left: '+=' + slideWidth
          }, duration, function() {
             $(this).prepend($('#slide li:last-child'));
             $(this).css('left', -slideWidth);
