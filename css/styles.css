@@ -285,7 +285,10 @@ header p {
    flex-basis: 50%;
    margin: 0 20px;
    background-size: cover;
-   background-image: url("../imgs/concert.jpg")
+   background-image: url("../imgs/concert.jpg");
+}
+.eventImg:last-child {
+   background-image: url("../imgs/concert2.jpg");
 }
 .eventDate {
    background-color: #B91318;
