@@ -10,10 +10,10 @@ $(function() {
          $(this).toggleClass('open');
          if($(this).hasClass('open')) {
             $('i', this).addClass('fa-times');
-            $('i', this).removeClass('fa-bars');
+            $('.drawerMenu').addClass('open');
          } else {
-            $('i', this).addClass('fa-bars');
             $('i', this).removeClass('fa-times');
+            $('.drawerMenu').removeClass('open');
          }
    });
 
