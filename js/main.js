@@ -95,12 +95,12 @@ $(function() {
       });
    }
    //スムーススクロール
-   
+   var headerBarHeight = 70;
    $('.smoothNav > ul > li > a').on('click', function() {
-      var target = $($(this).attr('href')).offset().top;
+      var target = $($(this).attr('href')).offset().top - headerBarHeight;
       $('html, body').animate({
          scrollTop: target
-         }, 500);
+      }, 500);
 
       return false;
    });
