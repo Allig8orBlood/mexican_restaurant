@@ -1,11 +1,30 @@
 $(function() {
 
-   var dis = 200;
+   var headerBarStatus = 'off';
+   $(window).on('scroll', function() {
+      if($(this).scrollTop() > 100) {
+         if(headerBarStatus === 'off') {
+            $('.headerBar').stop().animate({
+               top: 0
+            }, 300);
+            headerBarStatus = 'on';
+         }
+      } else {
+         if(headerBarStatus === 'on') {
+            $('.headerBar').stop().animate({
+               top: -70
+            }, 300);
+            headerBarStatus = 'off';
+         }
+      }
+   });
+
+   var drawerDis = 200;
    $('.toggleBtn').on('click', function() {
          $('.drawerMenu').animate({
-            left: '+=' + dis
+            left: '+=' + drawerDis
          }, 200);
-         dis *= -1;
+         drawerDis *= -1;
 
          $(this).toggleClass('open');
          if($(this).hasClass('open')) {
@@ -76,6 +95,7 @@ $(function() {
       });
    }
    //スムーススクロール
+   
    $('.smoothNav > ul > li > a').on('click', function() {
       var target = $($(this).attr('href')).offset().top;
       $('html, body').animate({

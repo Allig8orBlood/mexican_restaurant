@@ -107,7 +107,7 @@ header nav ul li a {
    padding: 0 10px 0 16px;
    color: #ffffff;
    text-transform: uppercase;
-   font-size: 14px;
+   font-size: 13px;
 }
 header nav li + li::before {
    content: '\f7e5';
@@ -127,6 +127,61 @@ header p {
    margin: 0;
    color: #ffffff;
    letter-spacing: .2rem;
+}
+.headerBar {
+   width: 100%;
+   position: fixed;
+   top: -70px;
+   left: 0;
+   background: #000000;
+   height: 70px;
+   z-index: 100;
+   background-color: rgba(0,0,0,.7);
+}
+.headerBar p {
+   float: left;
+   line-height: 69px;
+   height: 69px;
+   margin: 0 0 0 20px;
+   font-size: 20px;
+}
+.headerBar span {
+   color: #deb887;
+}
+.headerBar ul {
+   float: right;
+   margin: 0;
+   padding: 0;
+   height: 69px;
+   line-height: 69px;
+   margin: 0 20px 0 0;
+}
+.headerBar ul li {
+   padding: 0 8px;
+   position: relative;
+}
+.headerBar ul li::after {
+   position: absolute;
+   width: 100%;
+   height: 20%;
+   top: 40%;
+   left: 3%;
+   content: '';
+   display: block;
+   border-right: 1px solid #deb887;
+   pointer-events: none;
+}
+.headerBar ul li:last-child::after {
+   display: none;
+}
+.headerBar ul li a:hover {
+   color: #deb887;
+}
+.headerBar ul li a {
+   color: #ffffff;
+   height: 69px;
+   display: block;
+   font-size: 14px;
 }
 .foodGalleryTab {
    text-align: center;
@@ -377,7 +432,7 @@ footer p {
   position: fixed;
   right: 0;
   bottom: 0;
-  opacity: 0.8;
+  /* opacity: 0.8; */
 }
 #pageTop a{
   position: relative;
@@ -429,6 +484,9 @@ footer p {
       background: url("../imgs/tacos2.jpg") center/cover no-repeat;
    }
    header nav {
+      display: none;
+   }
+   .headerBar {
       display: none;
    }
    .toggleBtn {
@@ -590,7 +648,7 @@ footer p {
      position: fixed;
      right: 5px;
      bottom: 2px;
-     opacity: 0.8;
+     /* opacity: 0.8; */
    }
    #pageTop a{
      position: relative;
